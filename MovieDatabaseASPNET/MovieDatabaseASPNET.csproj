@@ -102,6 +102,7 @@
     <Content Include="HelloWorld.cshtml" />
     <None Include="packages.config" />
     <Content Include="TestRazor.cshtml" />
+    <Content Include="TestRazorPart2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
