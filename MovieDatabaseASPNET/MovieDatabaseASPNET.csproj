@@ -99,7 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Movies.cshtml" />
+    <Content Include="HelloWorld.cshtml" />
     <None Include="packages.config" />
+    <Content Include="TestRazor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
