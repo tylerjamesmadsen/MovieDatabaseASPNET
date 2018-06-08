@@ -24,29 +24,27 @@
     <meta charset="utf-8" />
     <title>Movies</title>
     <style type="text/css">
-              .grid {
+        .grid {
             margin: 4px;
             border-collapse: collapse;
             width: 600px;
         }
 
-                  .grid th, .grid td {
+            .grid th, .grid td {
                 border: 1px solid #C0C0C0;
                 padding: 5px;
             }
 
-              .head {
+        .head {
             background-color: #E8E8E8;
             font-weight: bold;
             color: #FFF;
         }
 
-              .alt {
+        .alt {
             background-color: #E8E8E8;
             color: #000;
         }
-
-
     </style>
 </head>
 <body>
@@ -68,15 +66,21 @@
 
     <div>
         @grid.GetHtml(
-          tableStyle: "grid",
-          headerStyle: "head",
-          alternatingRowStyle: "alt",
-          columns: grid.Columns(
-            grid.Column("Title"),
-            grid.Column("Genre"),
-            grid.Column("Year")
-          )
-        )
+            tableStyle: "grid",
+            headerStyle: "head",
+            alternatingRowStyle: "alt",
+            columns: grid.Columns(
+                 grid.Column(format: @<a href="~/EditMovie?id=@item.ID">Edit</a>),
+                         grid.Column("Title"),
+                         grid.Column("Genre"),
+                         grid.Column("Year"),
+                         grid.Column(format: @<a href="~/DeleteMovie?id=@item.ID">Delete</a>)
+                           )
+                         )
     </div>
+
+    <p>
+        <a href="~/AddMovie">Add a movie</a>
+    </p>
 </body>
 </html>

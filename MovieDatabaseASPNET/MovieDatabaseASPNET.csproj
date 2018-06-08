@@ -103,6 +103,8 @@
     <Content Include="HelloWorld.cshtml" />
     <Content Include="GravatarTest.cshtml" />
     <Content Include="AddMovie.cshtml" />
+    <Content Include="EditMovie.cshtml" />
+    <Content Include="DeleteMovie.cshtml" />
     <None Include="packages.config" />
     <Content Include="TestRazor.cshtml" />
     <Content Include="TestRazorPart2.cshtml" />
