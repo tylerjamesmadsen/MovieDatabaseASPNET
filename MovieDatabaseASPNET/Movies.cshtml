@@ -1,7 +1,7 @@
 ﻿@{
-    //var db = Database.Open("WebPagesMovies");
-    //var selectedData = db.Query("SELECT * FROM Movies");
-    //var grid = new WebGrid(source: selectedData);
+    var db = Database.Open("WebPagesMovies");
+    var selectedData = db.Query("SELECT * FROM Movies");
+    var grid = new WebGrid(source: selectedData);
 
 }
 
@@ -9,9 +9,17 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Movies</title>
 </head>
 <body>
-    
+    <div>
+        @grid.GetHtml(
+            columns: grid.Columns(
+                grid.Column("Title"),
+                grid.Column("Genre"),
+                grid.Column("Year")
+            )
+        )
+    </div>
 </body>
 </html>
